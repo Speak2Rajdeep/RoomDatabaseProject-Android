@@ -22,6 +22,6 @@ interface EmployeeDAO {
     @Query("SELECT * FROM employee where emp_id =:id")
     suspend fun getEmployee(id: Int): Employee
 
-    @Query("SELECT * FROM employee where emp_lname =:lname")
-    suspend fun getEmployeebyfName(lname: String): Employee
+    @Query("SELECT * FROM employee where emp_lname =:fname")
+    suspend fun getEmployeebyfName(fname: String): Employee
 }

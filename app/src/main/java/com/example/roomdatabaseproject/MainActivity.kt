@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
 import com.example.roomdatabaseproject.dataClass.Employee
@@ -59,12 +60,14 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
+        Toast.makeText(this, "New Record Inserted Successfully!!!", Toast.LENGTH_SHORT).show()
     }
 
     fun getEmployeeData(view: View?) {
         employeeDatabase.employeeDAO().getEmployees().observe(this@MainActivity) {
             Log.d("databaselog", it.toString())
         }
+        Toast.makeText(this, "Employee Record Fetched Successfully!!!", Toast.LENGTH_SHORT).show()
     }
 
     fun deleteEmployeeData(view: View) {
@@ -75,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        Toast.makeText(this, "Employee Record Deleted Successfully!!!", Toast.LENGTH_SHORT).show()
     }
 
     fun updateEmployeeData(view: View) {
@@ -86,5 +90,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        Toast.makeText(this, "Employee Record Updated Successfully!!!", Toast.LENGTH_SHORT).show()
     }
 }
