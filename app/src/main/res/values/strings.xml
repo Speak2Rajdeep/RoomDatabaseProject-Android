@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RoomDatabaseProject</string>
+    <string name="load_data_str">Load data</string>
+    <string name="delete_data_str">Delete</string>
+    <string name="update_data_str">Update Data</string>
+    <string name="insert_str">Insert</string>
+    <string name="first_name_str">First Name</string>
+    <string name="last_name_str">last name</string>
+    <string name="dob_str">Date of Birth</string>
+    <string name="email_str">Email</string>
+    <string name="gender_str">Gender</string>
+    <string name="address_str">Address</string>
+    <string name="ph_no_str">Phone No.</string>
+    <string name="department_str">Department</string>
+</resources>
