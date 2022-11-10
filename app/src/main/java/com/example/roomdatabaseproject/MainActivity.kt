@@ -78,10 +78,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateEmployeeData(view: View) {
-        phNo?.text?.toString()?.takeIf { it.isNotEmpty() }?.let { enteredId ->
+        firstName?.text?.toString()?.takeIf { it.isNotEmpty() }?.let { enteredId ->
             CoroutineScope(Dispatchers.IO).launch {
                 employeeDatabase.employeeDAO().getEmployeebyfName(enteredId).let { employee ->
-                    employee.emp_phoneNo = "999999999"
+                    employee.emp_fname = "new updated name"
                     employeeDatabase.employeeDAO().updateEmployee(employee)
                 }
             }
